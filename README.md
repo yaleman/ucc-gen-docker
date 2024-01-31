@@ -7,13 +7,6 @@ A simple Dockerfile for running the [Splunk UCC Framework](https://splunk.github
 If you're testing another version, you can run it like this:
 
 ```bash
-docker build -t ucc-gen-docker . \
+docker build --no-cache -t ucc-gen-docker . \
     --build-arg="UCC_PACKAGE=git+https://github.com/yaleman/addonfactory-ucc-generator@openapi-schema-fix-multi-input"
-```
-
-Or as a make command:
-
-```shell
-UCC_PACKAGE='git+https://github.com/yaleman/addonfactory-ucc-generator@openapi-schema-fix-multi-input' \
-make build
 ```
