@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM python:3.9-slim
 
 ARG UCC_PACKAGE=splunk-add-on-ucc-framework
 ENV UCC_PACKAGE=${UCC_PACKAGE}
