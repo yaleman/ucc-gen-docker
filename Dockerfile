@@ -13,11 +13,14 @@ RUN echo "Installing ${UCC_PACKAGE}"
 RUN /venv/bin/python -m pip install splunk-packaging-toolkit
 RUN ./install_package.sh "${UCC_PACKAGE}"
 
-RUN echo '${UCC_PACKAGE}' > /ucc_package.txt
+RUN echo "${UCC_PACKAGE}" > /ucc_package.txt
 
 RUN apt-get -y install make
 
-
+# clean up apt cache
+RUN apt-get clean
+# clean up yarn cache
+RUN rm -rf /usr/local/share/.cache/
 ENV PATH="/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/venv/bin"
 
 WORKDIR /app

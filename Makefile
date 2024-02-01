@@ -1,3 +1,6 @@
+# the default name
+UCC_PACKAGE=splunk-add-on-ucc-framework
+
 
 .DEFAULT: help
 .PHONY: help
