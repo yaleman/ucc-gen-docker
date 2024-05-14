@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-import re
 import sys
 
 # git+https://github.com/yaleman/addonfactory-ucc-generator/@openapi-schema-fix-multi-input
@@ -19,7 +18,7 @@ if package_ref.startswith("git+"):
     leftover = "+".join(package_ref.split("+")[1:])
 
     branch = None
-    if '@' in leftover:
+    if "@" in leftover:
         atsplit = leftover.split("@")
         branch = atsplit[-1]
         leftover = "@".join(atsplit[:-1])
