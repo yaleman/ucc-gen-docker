@@ -12,7 +12,6 @@ print(f"Parsing {package_ref}", file=sys.stderr)
 
 output = ""
 
-
 if package_ref.startswith("git+"):
     method = package_ref.split("+")[0]
     leftover = "+".join(package_ref.split("+")[1:])
